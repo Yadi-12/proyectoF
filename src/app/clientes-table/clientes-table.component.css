@@ -1,0 +1,9 @@
+.cliente-img {
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+  }
+
+  .titulo {
+    font-size: 36px; /* Ajusta el tamaño de fuente según tus preferencias */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: 'Arial', sans-serif; /* Cambia la tipografía del título */
+  }

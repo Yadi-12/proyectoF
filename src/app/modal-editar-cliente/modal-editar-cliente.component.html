@@ -1,0 +1,45 @@
+<!-- modal-editar-cliente.component.html
+<h2 mat-dialog-title>Editar Cliente</h2>
+<div mat-dialog-content>
+  <input type="text" [(ngModel)]="data.nombres" placeholder="Nombres">
+  <input type="text" [(ngModel)]="data.apellidos" placeholder="Apellidos">
+  <input type="text" [(ngModel)]="data.email" placeholder="Email">
+  <input type="password" [(ngModel)]="data.contrasena" placeholder="Contraseña">
+  <input type="text" [(ngModel)]="data.foto" placeholder="URL de Foto">
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Guardar Cambios</button>
+</div> -->
+<!-- modal-editar-cliente.component.html -->
+<!-- modal-editar-cliente.component.html -->
+<h2 mat-dialog-title>Editar Cliente</h2>
+<div mat-dialog-content>
+  <form #clienteForm="ngForm" class="modal-form">
+    <mat-form-field class="modal-input">
+      <mat-label>Nombre</mat-label>
+      <input matInput type="text" name="nombres" [(ngModel)]="data.nombres" placeholder="Nombres" required>
+    </mat-form-field>
+    <mat-form-field class="modal-input">
+      <mat-label>Apellido</mat-label>
+      <input matInput type="text" name="apellidos" [(ngModel)]="data.apellidos" placeholder="Apellidos" required>
+    </mat-form-field>
+    <mat-form-field class="modal-input">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" name="email" [(ngModel)]="data.email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+      <mat-error *ngIf="clienteForm.controls['email'].hasError('pattern')">El correo electrónico no es válido.</mat-error>
+    </mat-form-field>
+    <mat-form-field class="modal-input">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" name="contrasena" [(ngModel)]="data.contrasena" placeholder="Contraseña" required>
+    </mat-form-field>
+    <mat-form-field class="modal-input">
+      <mat-label>URL de Foto</mat-label>
+      <input matInput type="text" name="foto" [(ngModel)]="data.foto" placeholder="URL de Foto">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="modal-actions">
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button [mat-dialog-close]="data" [disabled]="!clienteForm.form.valid" cdkFocusInitial>Guardar Cambios</button>
+</div>

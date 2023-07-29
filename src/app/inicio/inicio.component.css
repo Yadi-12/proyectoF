@@ -1,0 +1,36 @@
+/* Estilos para alinear el contenido a la derecha */
+.align-right {
+    flex: 1; /* Permite que el contenido se expanda y ocupe todo el espacio disponible */
+    display: flex;
+    justify-content: space-between; /* Coloca el contenido a ambos lados del contenedor */
+    align-items: center; /* Centra verticalmente el contenido */
+  }
+  
+  
+  .custom-logo {
+    width: 70px; 
+    height: 70px;
+  }
+
+  /* Estilos para la imagen del usuario */
+.user-avatar {
+    width: 50px; /* Ajusta el ancho de la imagen según lo necesites */
+    height: 48px; /* Ajusta la altura de la imagen según lo necesites */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    margin-right: 10px; /* Ajusta el margen entre la imagen y el nombre según lo necesites */
+  }
+
+  
+  .list-item-content {
+    display: flex;
+    align-items: center;
+    height: 800px; /* Ajusta la altura del espacio que contiene la imagen y el nombre según lo necesites */
+  }
+
+
+  .titulo {
+    font-size: 30px; /* Ajusta el tamaño de fuente según tus preferencias */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: 'Arial', sans-serif; /* Cambia la tipografía del título */
+  }
+  

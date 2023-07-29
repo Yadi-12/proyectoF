@@ -1,0 +1,16 @@
+.modal-content {
+    display: flex;
+  }
+  
+  .form {
+    flex: 1;
+    margin-right: 20px; /* Espacio entre el formulario y la imagen */
+  }
+  
+  .image-container {
+    width: 200px; /* Ancho de la imagen */
+    height: 200px; /* Altura de la imagen */
+  }
+  .modal-form {
+    text-align: center;
+  }

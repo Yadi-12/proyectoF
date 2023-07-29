@@ -1,0 +1,51 @@
+<div class="flex registro-page">
+    <div class="m-auto">
+        <mat-card>
+            <mat-card-title class="center-title">
+                <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Descripción de la imagen">
+              </mat-card-title>
+              
+            <mat-card-title class="center-title"> 
+                Registro
+            </mat-card-title>
+            <mat-card-content>
+                <form (ngSubmit)="register()" #registerForm="ngForm">
+                    <mat-form-field>
+                        <mat-label>Nombre </mat-label>
+                        <input matInput type="text" placeholder="Ingrese su nombre" required
+                            [(ngModel)]="nombre" name="nombre" #nombreInput="ngModel" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Apellido</mat-label>
+                        <input matInput type="text" placeholder="Ingrese su Apellido" required
+                            [(ngModel)]="apellido" name="apellido" #apellidoInput="ngModel" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="Ingrese su correo electrónico" required
+                            [(ngModel)]="email" name="email" #emailInput="ngModel"
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" placeholder="Ingrese su contraseña" required
+                            [(ngModel)]="password" name="password" #passwordInput="ngModel" />
+                    </mat-form-field>                  
+                      
+                </form>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions class="center-title">
+                <button [disabled]="!registerForm.form.valid" color="accent" type="submit" mat-raised-button (click)="register()">
+                  <span>Registrarse</span>
+                </button>
+                <button  mat-raised-button routerLink="/">
+                  Iniciar sesión
+                </button>
+              </mat-card-actions>
+            <div *ngIf="registerForm.submitted && registerForm.invalid" class="error-message">
+                Por favor, complete todos los campos requeridos correctamente.
+            </div>
+        </mat-card>
+    </div>
+</div>

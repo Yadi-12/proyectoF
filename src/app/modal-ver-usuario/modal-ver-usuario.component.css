@@ -1,0 +1,22 @@
+/* modal-ver-usuario.component.css */
+
+.dialog-title {
+    color: white;
+    text-align: center;
+  }
+  
+  .dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  img {
+    border-radius: 50%;
+    margin: 20px 0;
+  }
+  
+  .dialog-close-button {
+    margin-top: 20px;
+  }
+  

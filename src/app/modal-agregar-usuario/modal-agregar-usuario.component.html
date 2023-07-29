@@ -1,0 +1,43 @@
+<!-- modal-agregar-usuario.component.html
+<h2 mat-dialog-title>Agregar Usuario</h2>
+<div mat-dialog-content>
+  <form #usuarioForm="ngForm">
+    <input type="text" name="nombres" [(ngModel)]="nuevoUsuario.nombres" placeholder="Nombres" required>
+    <input type="text" name="apellidos" [(ngModel)]="nuevoUsuario.apellidos" placeholder="Apellidos" required>
+    <input type="email" name="email" [(ngModel)]="nuevoUsuario.email" placeholder="Email" required>
+    <input type="password" name="contrasena" [(ngModel)]="nuevoUsuario.contrasena" placeholder="Contraseña" required>
+    <input type="text" name="foto" [(ngModel)]="nuevoUsuario.foto" placeholder="URL de Foto">
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="nuevoUsuario" [disabled]="!usuarioForm.form.valid" cdkFocusInitial>Agregar</button>
+</div> -->
+<!-- modal-agregar-usuario.component.html -->
+<h2 mat-dialog-title>Agregar Usuario</h2>
+<div mat-dialog-content>
+  <form #usuarioForm="ngForm" class="modal-form">
+    <mat-form-field class="modal-input">
+      <input matInput type="text" name="nombres" [(ngModel)]="nuevoUsuario.nombres" placeholder="Nombres" required>
+    </mat-form-field>
+    <mat-form-field class="modal-input">
+      <input matInput type="text" name="apellidos" [(ngModel)]="nuevoUsuario.apellidos" placeholder="Apellidos" required>
+    </mat-form-field>
+
+    <mat-form-field class="modal-input">
+      <input matInput type="email" name="email" [(ngModel)]="nuevoUsuario.email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+      title="Please enter a valid email address" />
+    </mat-form-field>
+
+    <mat-form-field class="modal-input">
+      <input matInput type="password" name="contrasena" [(ngModel)]="nuevoUsuario.contrasena" placeholder="Contraseña" required>
+    </mat-form-field>
+    <mat-form-field class="modal-input">
+      <input matInput type="text" name="foto" [(ngModel)]="nuevoUsuario.foto" placeholder="URL de Foto">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="modal-actions">
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button [mat-dialog-close]="nuevoUsuario" [disabled]="!usuarioForm.form.valid" cdkFocusInitial>Agregar</button>
+</div>

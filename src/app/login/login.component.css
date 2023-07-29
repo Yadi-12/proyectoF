@@ -1,0 +1,35 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.center-title {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    color: rgb(250, 252, 253);
+  }
+  
+  .center-title img {
+    width: 100px; /* Ajusta el ancho según tus preferencias */
+    height:100px; /* Ajusta la altura según tus preferencias */
+  
+  }
+ 
+.custom-primary-button {
+    background-color: #81c9d6; /* Puedes ajustar este color según el tono de amarillo oscuro deseado */
+    color: white; /* Ajusta el color del texto si es necesario para asegurar la legibilidad */
+  }
+
+.login-page {
+  background-image: url("https://virtualbackgrounds.site/wp-content/uploads/2021/02/womens-clothing-store.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}

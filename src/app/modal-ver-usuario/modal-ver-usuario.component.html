@@ -1,0 +1,12 @@
+
+<div class="dialog-content">
+  <ng-container *ngIf="data.foto">
+    <img [src]="data.foto" alt="Foto de {{ data.nombres }}" height="100" width="100" />
+  </ng-container>
+  <p><strong>Nombre:</strong> {{ data.nombres }} {{ data.apellidos }}</p>
+
+  <p><strong>Email:</strong> {{ data.email }}</p>
+  <!-- Agrega aquí el resto de los campos que deseas mostrar -->
+</div>
+<button mat-button class="dialog-close-button" (click)="cerrarDialogo()">Cerrar</button>
+
